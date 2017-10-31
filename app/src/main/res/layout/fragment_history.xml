@@ -1,0 +1,307 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mindstix.nytimesapp.books.HistoryFragment"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_history_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        app:cardCornerRadius="@dimen/eight_dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/five_dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/book_information"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingLeft="@dimen/five_dp"/>
+
+            <TextView
+                android:id="@+id/tv_history_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingLeft="@dimen/five_dp"/>
+
+            <TextView
+                android:id="@+id/tv_history_author"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingLeft="@dimen/five_dp"/>
+
+            <TextView
+                android:id="@+id/tv_history_desc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:paddingLeft="@dimen/five_dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_history_rank_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        app:cardCornerRadius="@dimen/eight_dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/five_dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/ranking_information"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingLeft="@dimen/five_dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_history_current_rank_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/current_rank"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_current_rank"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_history_last_week_rank_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/last_week_rank"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_last_week_rank"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_history_list_name_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/list_name"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_list_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_history_weeks_on_list_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/weeks_on_list"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_weeks_on_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_history_review_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        app:cardCornerRadius="@dimen/eight_dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/five_dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/review_links"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingLeft="@dimen/five_dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_history_book_review_link_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/book_review_link"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_book_review_link"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_history_first_chapter_link_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/first_chapter_link"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_first_chapter_link"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_history_sunday_review_link_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/sunday_review_link"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_sunday_review_link"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_history_article_chapter_link_label"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/article_chapter_link"
+                    android:paddingLeft="@dimen/five_dp"/>
+
+                <TextView
+                    android:id="@+id/tv_history_article_chapter_link"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
